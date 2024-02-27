@@ -1,0 +1,3 @@
+[submodule "home/base/desktop/editors/neovim/astronvim_user"]
+	path = home/base/desktop/editors/neovim/astronvim_user
+	url = https://github.com/Skiexx/astronvim_config.git
