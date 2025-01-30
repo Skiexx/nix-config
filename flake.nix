@@ -16,7 +16,7 @@
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
-	    nixpkgs.overlays = [
+	          nixpkgs.overlays = [
               (final: prev: {
                 unstable = import nixpkgs-unstable {
                   system = final.system;

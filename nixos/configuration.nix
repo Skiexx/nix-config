@@ -1,20 +1,17 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, ... }:
 
+let
+  moduleDir = builtins.toPath ./modules;
+  moduleFiles = builtins.attrNames (builtins.readDir moduleDir);
+  modulePaths = map (file: "${toString moduleDir}/${file}") (builtins.filter (f: lib.hasSuffix ".nix" f) moduleFiles);
+in
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./modules/nix.nix
-      ./modules/boot.nix
-      ./modules/networking.nix
-      ./modules/time.nix
-      ./modules/i18n.nix
-      ./modules/users.nix
-      ./modules/packages.nix
-      ./modules/ssh.nix
-      ./modules/security.nix
-      ./modules/hyprland.nix
-    ];
+  imports = builtins.concatLists [
+    [ ./hardware-configuration.nix ]
+    [ ./modules/packages.nix ]
+    [ ./modules/shell.nix ]
+    modulePaths
+  ];
 
   system.stateVersion = "24.11";
 }

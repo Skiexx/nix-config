@@ -1,41 +1,37 @@
 { config, pkgs, ... }:
 
 {
-  services = {
-    xserver.enable = true;
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-      };
-      autoLogin = {
-        enable = true;
-        user = "skiexx";
-      };
-      defaultSession = "hyprland";
-    };
-  };
-
   programs.hyprland.enable = true;
   programs.xwayland.enable = true;
 
   environment.systemPackages = with pkgs; [
+    # Панель и уведомления
     waybar
     rofi-wayland
     dunst
     mako
+
+    # Терминалы
     alacritty
     kitty
+
+    # Файловые менеджеры
     xfce.thunar
+
+    # Аудио и мультимедиа
     pavucontrol
+    playerctl
+    networkmanagerapplet
+
+    # Управление клипбордом и скриншотами
     wl-clipboard
     grim
     slurp
+
+    # Блок и энергосбережение экрана
     swaylock
     swayidle
     brightnessctl
-    playerctl
-    networkmanagerapplet
   ];
 
   #  hardware.graphics = {
