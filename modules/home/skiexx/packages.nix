@@ -6,5 +6,7 @@
     fd
     bat
     eza
+
+    vivaldi
   ];
 }

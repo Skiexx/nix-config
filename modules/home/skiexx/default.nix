@@ -13,8 +13,10 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "firefox";
+    BROWSER = "vivaldi";
   };
+
+  nixpkgs.config.allowUnfree = true;
 
   programs.fish = {
     enable = true;
