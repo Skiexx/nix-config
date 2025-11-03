@@ -16,7 +16,7 @@
   networking.networkmanager.enable = true;
 
   environment.systemPackages = with pkgs; [
-    wget curl git
+    wget curl git jq
   ];
 
   programs.fish.enable = true;

@@ -5,6 +5,7 @@
     ../../modules/system/base.nix
     ../../modules/system/services.nix
     ../../modules/system/plasma.nix
+    ../../modules/system/docker.nix
   ];
 
   networking.hostName = "nixos";
@@ -17,7 +18,11 @@
     shell = pkgs.fish;
   };
 
-  home-manager.users.skiexx = import ../../modules/home/skiexx/default.nix;
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
+  ];
+
+  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.05";
 }

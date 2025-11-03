@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, config, lib, inputs, ... }:
 
 {
   imports = [
@@ -6,6 +6,7 @@
     ./packages.nix
     ./git.nix
     ./neovim.nix
+    ./java.nix
   ];
 
   home.username = "skiexx";
@@ -16,7 +17,12 @@
     BROWSER = "vivaldi";
   };
 
-  nixpkgs.config.allowUnfree = true;
+  programs.neovim.languageSupport = {
+    rust.enable = false;
+    java.enable = true;
+    php.enable = false;
+    js.enable = true;
+  };
 
   programs.fish = {
     enable = true;
