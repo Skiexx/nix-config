@@ -3,7 +3,7 @@
 {
   programs.git = {
     enable = true;
-    settings = {
+    extraConfig = {
       user = {
         name = "Skiexx";
         email = "codeskiexx@yandex.ru";

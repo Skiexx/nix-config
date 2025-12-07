@@ -35,7 +35,6 @@
 	      home-manager.useGlobalPkgs = true;
 	      home-manager.useUserPackages = true;
 	      home-manager.extraSpecialArgs = commonArgs;
-	      home-manager.users.skiexx = import ./modules/home/skiexx/default.nix commonArgs;
 	    }
 	  ];
         };

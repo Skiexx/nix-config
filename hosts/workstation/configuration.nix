@@ -18,8 +18,11 @@
     shell = pkgs.fish;
   };
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
+  home-manager.users.skiexx = import ../../modules/home/skiexx/default.nix;
+
+  fonts.packages = with pkgs.nerd-fonts; [
+    fira-code
+    jetbrains-mono
   ];
 
   nixpkgs.config.allowUnfree = true;
