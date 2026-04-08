@@ -90,6 +90,12 @@
   };
   systemd.user.services.dms = {
     wantedBy = lib.mkForce ["niri.service"];
+    environment = {
+      HTTP_PROXY = "socks5://127.0.0.1:1080";
+      HTTPS_PROXY = "socks5://127.0.0.1:1080";
+      ALL_PROXY = "socks5://127.0.0.1:1080";
+      NO_PROXY = "localhost,127.0.0.1,::1";
+    };
   };
   systemd.user.services.niri-flake-polkit.enable = false;
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
@@ -110,10 +116,11 @@
   xdg.portal = {
     config = {
       niri = {
-        default = ["gnome"];
+        default = ["gnome" "gtk"];
         "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
+        "org.freedesktop.impl.portal.FileChooser" = ["gtk"];
       };
-      common.default = ["gnome"];
+      common.default = ["gnome" "gtk"];
     };
     enable = true;
     xdgOpenUsePortal = true;

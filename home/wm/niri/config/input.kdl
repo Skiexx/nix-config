@@ -4,7 +4,8 @@ input {
         xkb {
                layout "us,ru"
             // variant "colemak_dh_ortho"
-               options "grp:win_space_toggle"
+            // Переключение раскладки через niri bind (keybindings.kdl)
+            // options "grp:win_space_toggle"
             // model ""
             // rules ""
             // file "~/.config/keymap.xkb"

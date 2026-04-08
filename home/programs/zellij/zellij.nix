@@ -11,6 +11,7 @@
 
   home.file = {
     ".config/zellij/config.kdl".text = ''
+      default_shell "fish"
       on_force_close "quit"
       session_serialization false
       default_layout "dev"
