@@ -1,0 +1,7 @@
+keys:
+  - &skiexx age14ty0z9g7lu70lwxj8yqm9wqq2m6g2j3yfyavgsrzf6f9wr74jugspfhv4v
+creation_rules:
+  - path_regex: secrets/secrets\.yaml$
+    key_groups:
+      - age:
+          - *skiexx

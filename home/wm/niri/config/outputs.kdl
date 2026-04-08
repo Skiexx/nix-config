@@ -1,0 +1,51 @@
+// Primary monitor (left)
+output "DP-1" {
+    mode "2560x1440@240"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+
+
+    hot-corners {
+           off
+        // top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
+
+
+    layout {
+        // ...layout settings for eDP-1...
+    }   
+
+
+
+    
+}
+
+// Secondary monitor (right)
+output "DP-2" {
+    mode "1920x1080@60"
+    scale 1
+    transform "normal"
+    focus-at-startup
+    position x=2560 y=360
+
+
+    hot-corners {
+          off
+        //top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
+
+
+    layout {
+        // ...layout settings for DP-2...
+    }
+
+
+
+}
