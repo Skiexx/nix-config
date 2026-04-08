@@ -31,11 +31,16 @@
     enable = true;
 
     settings = {
-      theme = "dark";
+      theme = "rose-pine";
       dynamicTheming = true;
       weather = {
         enabled = true;
         location = "Tomsk";
+      };
+      plugins = {
+        linux-wallpaper-engine.enabled = true;
+        docker-manager.enabled = true;
+        dank-launcher-keys.enabled = true;
       };
     };
   };

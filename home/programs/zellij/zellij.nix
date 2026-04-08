@@ -128,19 +128,29 @@
     ".config/zellij/layouts/focus.kdl".text = ''
       layout {
           default_tab_template {
-              pane size=1 borderless=true { plugin location="compact-bar" }
+              pane size=1 borderless=true {
+                  plugin location="zellij:compact-bar"
+              }
               children
           }
-          tab name="edit" focus=true { pane name="editor" }
-          tab name="claude" { pane name="claude" }
-          tab name="srv" { pane name="server" }
+          tab name="edit" focus=true {
+              pane name="editor"
+          }
+          tab name="claude" {
+              pane name="claude"
+          }
+          tab name="srv" {
+              pane name="server"
+          }
       }
     '';
 
     ".config/zellij/layouts/dev.kdl".text = ''
       layout {
           default_tab_template {
-              pane size=1 borderless=true { plugin location="compact-bar" }
+              pane size=1 borderless=true {
+                  plugin location="zellij:compact-bar"
+              }
               children
           }
           tab name="edit" focus=true {
@@ -152,8 +162,12 @@
                   pane name="claude"
               }
           }
-          tab name="claude" { pane name="claude" }
-          tab name="srv" { pane name="server" }
+          tab name="claude" {
+              pane name="claude"
+          }
+          tab name="srv" {
+              pane name="server"
+          }
       }
     '';
   };
