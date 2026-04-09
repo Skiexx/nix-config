@@ -5,7 +5,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      font-family = "JetBrainsMono Nerd Font";
+      font-family = "JetBrainsMono Nerd Font Mono";
       font-size = 12;
       background = "#000000";
       background-opacity = 0.55;
