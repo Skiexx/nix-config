@@ -91,9 +91,28 @@
         "$directory"
         "$git_branch"
         "$git_status"
+        "$fill"
         "$nix_shell"
+        "$python"
+        "$nodejs"
+        "$rust"
+        "$golang"
+        "$java"
+        "$kotlin"
+        "$dotnet"
+        "$php"
+        "$lua"
+        "$zig"
+        "$ruby"
+        "$elixir"
+        "$swift"
+        "$c"
+        "$docker_context"
+        "$line_break"
         "$character"
       ];
+
+      fill.symbol = " ";
 
       character = {
         success_symbol = "[](bold green)";
@@ -127,7 +146,7 @@
       };
 
       nix_shell = {
-        symbol = "  ";
+        symbol = " ";
         format = "via [$symbol$state]($style) ";
         style = "bold blue";
       };
@@ -143,6 +162,97 @@
         format = "on [$hostname]($style) ";
         style = "bold green";
         disabled = true;
+      };
+
+      # Языки и фреймворки — иконки Nerd Font
+      python = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold yellow";
+      };
+
+      nodejs = {
+        symbol = "󰎙 ";
+        format = "[$symbol$version]($style) ";
+        style = "bold green";
+      };
+
+      rust = {
+        symbol = "󱘗 ";
+        format = "[$symbol$version]($style) ";
+        style = "bold red";
+      };
+
+      golang = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold cyan";
+      };
+
+      java = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold red";
+      };
+
+      kotlin = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold purple";
+      };
+
+      dotnet = {
+        symbol = "󰪮 ";
+        format = "[$symbol$version]($style) ";
+        style = "bold blue";
+      };
+
+      php = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold 147";
+      };
+
+      lua = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold blue";
+      };
+
+      zig = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold yellow";
+      };
+
+      ruby = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold red";
+      };
+
+      elixir = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold purple";
+      };
+
+      swift = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold 208";
+      };
+
+      c = {
+        symbol = " ";
+        format = "[$symbol$version]($style) ";
+        style = "bold blue";
+      };
+
+      docker_context = {
+        symbol = " ";
+        format = "[$symbol$context]($style) ";
+        style = "bold blue";
       };
     };
   };
