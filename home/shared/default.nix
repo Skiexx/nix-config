@@ -82,9 +82,9 @@
 
       # --- Языки программирования ---
       python3
-      nodejs
       go
       rustup       # Rust toolchain (rustc, cargo, rustfmt, clippy)
+      # Java, Node.js, PHP — через mise (programs.mise)
     ]
     ++ (lib.attrValues (lib.filterAttrs (n: v: !lib.isFunction v) scripts));
 in {

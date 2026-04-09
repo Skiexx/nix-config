@@ -28,6 +28,7 @@
     ../programs/sing-box/sing-box.nix
     ../programs/dms/dms.nix
     ../programs/neovim/neovim.nix
+    ../programs/mise/mise.nix
   ];
 
   programs = {
